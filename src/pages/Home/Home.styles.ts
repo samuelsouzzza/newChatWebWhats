@@ -6,11 +6,11 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
+  background-color: ${({ theme }) => (theme ? 'green' : 'red')};
 `;
 
 export const Box = styled.div`
-  /* background-color: red; */
+  background-color: #fff;
   width: 30%;
   height: 30%;
   padding: 1%;
@@ -21,4 +21,10 @@ export const Box = styled.div`
   flex-direction: column;
   gap: 2% 0;
   box-shadow: 1px 1px 5px #ccc;
+`;
+export const Title = styled.h1`
+  color: #333;
+  margin: 2% 0;
+  user-select: none;
+  justify-self: start;
 `;
