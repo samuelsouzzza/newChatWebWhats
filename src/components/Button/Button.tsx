@@ -9,15 +9,16 @@ type ButtonProps = {
 export const Button = ({ number }: ButtonProps) => {
   const { darkTheme } = UseThemeContext();
 
-  function openChat(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    cell: string | null
-  ) {
-    window.open(`https://wa.me/55${cell}`);
+  function openChat(cell: string | null) {
+    window.open(`https://wa.me/55${cell?.replace(/\D/g, '')}`);
   }
 
   return (
-    <Container theme={darkTheme} onClick={(e) => openChat(e, number)}>
+    <Container
+      theme={darkTheme}
+      onClick={() => openChat(number)}
+      disabled={!number ? true : false}
+    >
       Conversar
     </Container>
   );

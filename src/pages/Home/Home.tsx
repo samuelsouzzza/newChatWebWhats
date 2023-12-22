@@ -8,7 +8,7 @@ import { UseThemeContext } from '../../Global/ThemeContext.tsx';
 export const Home = () => {
   const { darkTheme } = UseThemeContext();
 
-  const [cell, setCell] = React.useState<null | string>(null);
+  const [cell, setCell] = React.useState<string>('');
 
   return (
     <Container theme={darkTheme}>
