@@ -22,6 +22,9 @@ export const Box = styled.div`
   gap: 5% 0;
   box-shadow: 1px 1px 5px
     ${({ theme }) => (theme === true ? '#2a2a2a' : '#ddd')};
+  @media (max-width: 400px) {
+    width: 90%;
+  }
 `;
 export const Title = styled.h1`
   color: ${({ theme }) => (theme === true ? '#ddd' : '#2a2a2a')};
