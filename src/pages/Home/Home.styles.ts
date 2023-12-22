@@ -6,11 +6,11 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => (theme ? 'green' : 'red')};
+  background-color: ${({ theme }) => (theme === true ? '#4a4a4a' : '#ece5dd')};
 `;
 
 export const Box = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => (theme === true ? '#3a3a3a' : '#fff')};
   width: 30%;
   height: 30%;
   padding: 1%;
@@ -20,7 +20,8 @@ export const Box = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 2% 0;
-  box-shadow: 1px 1px 5px #ccc;
+  box-shadow: 1px 1px 5px
+    ${({ theme }) => (theme === true ? '#2a2a2a' : '#ddd')};
 `;
 export const Title = styled.h1`
   color: #333;

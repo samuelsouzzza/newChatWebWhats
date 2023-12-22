@@ -1,8 +1,8 @@
 import React from 'react';
 
 type ITheme = {
-  theme: boolean;
-  setTheme: React.Dispatch<React.SetStateAction<boolean>>;
+  darkTheme: boolean;
+  toggleTheme: () => void;
 };
 
 const ThemeContext = React.createContext<ITheme | null>(null);
@@ -16,14 +16,19 @@ export const UseThemeContext = () => {
 };
 
 export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
-  const [theme, setTheme] = React.useState(
+  const [darkTheme, setDarkTheme] = React.useState(
     localStorage.getItem('themeNewChat')
       ? Boolean(localStorage.getItem('themeNewChat'))
       : false
   );
 
+  function toggleTheme() {
+    setDarkTheme(!darkTheme);
+    localStorage.setItem('themeNewChat', darkTheme.toString());
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ darkTheme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

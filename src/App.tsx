@@ -1,12 +1,14 @@
 import React from 'react';
 import { Home } from './pages/Home/Home';
-import { ThemeProvider } from './Global/ThemeContext';
+import { ThemeProvider } from './global/ThemeContext';
 
 function App() {
   return (
-    <ThemeProvider>
-      <Home />
-    </ThemeProvider>
+    <React.StrictMode>
+      <ThemeProvider>
+        <Home />
+      </ThemeProvider>
+    </React.StrictMode>
   );
 }
 
