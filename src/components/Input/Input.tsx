@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './Input.styles.ts';
-import { UseThemeContext } from '../../global/ThemeContext.tsx';
+import { UseThemeContext } from '../../Global/ThemeContext.tsx';
 
 type InputProps = {
   value: null | string;

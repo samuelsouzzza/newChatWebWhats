@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './BarOptions.styles.ts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-import { UseThemeContext } from '../../global/ThemeContext.tsx';
+import { UseThemeContext } from '../../Global/ThemeContext.tsx';
 
 export const BarOptions = () => {
   const { darkTheme, toggleTheme } = UseThemeContext();
