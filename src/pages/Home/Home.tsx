@@ -14,7 +14,7 @@ export const Home = () => {
     <Container theme={darkTheme}>
       <Box theme={darkTheme}>
         <BarOptions />
-        <Title>Abrir nova conversa</Title>
+        <Title theme={darkTheme}>Abrir nova conversa</Title>
         <Input value={cell} setValue={setCell} />
         <Button number={cell} />
       </Box>

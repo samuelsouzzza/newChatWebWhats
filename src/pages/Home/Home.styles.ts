@@ -19,12 +19,12 @@ export const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2% 0;
+  gap: 5% 0;
   box-shadow: 1px 1px 5px
     ${({ theme }) => (theme === true ? '#2a2a2a' : '#ddd')};
 `;
 export const Title = styled.h1`
-  color: #333;
+  color: ${({ theme }) => (theme === true ? '#ddd' : '#2a2a2a')};
   margin: 2% 0;
   user-select: none;
   justify-self: start;

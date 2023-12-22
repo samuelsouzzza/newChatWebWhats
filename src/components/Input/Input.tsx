@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from './Input.styles.ts';
+import { UseThemeContext } from '../../global/ThemeContext.tsx';
 
 type InputProps = {
   value: null | string;
@@ -7,8 +8,11 @@ type InputProps = {
 };
 
 export const Input = ({ value, setValue }: InputProps) => {
+  const { darkTheme } = UseThemeContext();
+
   return (
     <Container
+      theme={darkTheme}
       placeholder='Digite o número aqui'
       type='text'
       value={value || ''}

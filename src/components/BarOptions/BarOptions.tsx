@@ -8,7 +8,7 @@ export const BarOptions = () => {
   const { darkTheme, toggleTheme } = UseThemeContext();
 
   return (
-    <Container>
+    <Container theme={darkTheme}>
       {darkTheme ? (
         <FontAwesomeIcon icon={faSun} onClick={toggleTheme} />
       ) : (
