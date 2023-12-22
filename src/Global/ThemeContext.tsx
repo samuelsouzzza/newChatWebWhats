@@ -17,14 +17,15 @@ export const UseThemeContext = () => {
 
 export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
   const [darkTheme, setDarkTheme] = React.useState(
-    localStorage.getItem('themeNewChat')
-      ? Boolean(localStorage.getItem('themeNewChat'))
-      : false
+    JSON.parse(localStorage.getItem('themeNewChat') as string)
   );
+
+  React.useEffect(() => {
+    localStorage.setItem('themeNewChat', String(darkTheme));
+  }, [darkTheme]);
 
   function toggleTheme() {
     setDarkTheme(!darkTheme);
-    localStorage.setItem('themeNewChat', darkTheme.toString());
   }
 
   return (
