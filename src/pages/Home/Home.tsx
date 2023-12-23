@@ -14,7 +14,11 @@ export const Home = () => {
     <Container theme={darkTheme}>
       <Box theme={darkTheme}>
         <BarOptions />
-        <Title theme={darkTheme}>Abrir nova conversa</Title>
+        <Title theme={darkTheme}>Abrir nova conversa</Title>{' '}
+        <p>
+          Inicie uma conversa com alguém que você não possui o contato salvo no
+          WhatsApp.
+        </p>
         <Input value={cell} setValue={setCell} />
         <Button number={cell} />
       </Box>

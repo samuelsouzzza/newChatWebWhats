@@ -8,6 +8,7 @@ export const Container = styled.button`
   color: #fff;
   border-radius: 5px;
   font-size: 1.15rem;
+  margin: 2% 0;
   cursor: pointer;
   &:hover {
     border: 1px solid ${({ theme }) => (theme === true ? '#25d366' : '#005d4b')};
